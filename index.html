@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天翼精维代码展示</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #0f172a;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: #e5e7eb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 34px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      color: #cbd5e1;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .tags {
+      margin-top: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 13px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    }
+
+    .card-title {
+      padding: 14px 20px;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
+      font-size: 16px;
+      font-weight: bold;
+      color: #f8fafc;
+    }
+
+    pre {
+      margin: 0;
+      padding: 22px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>天翼精维系统代码展示</h1>
+      <p>
+        面向低空经济的无人机集群健康评估与高可靠协同调度优化系统<br>
+        Health Assessment and High-Reliability Collaborative Scheduling for UAV Swarms
+      </p>
+
+      <div class="tags">
+        <span class="tag">可靠性评估</span>
+        <span class="tag">故障预测</span>
+        <span class="tag">多目标调度</span>
+        <span class="tag">分级维护</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Markov-Weibull 任务可靠性评估代码</div>
+      <pre><code id="code-block" class="language-python">代码加载中...</code></pre>
+    </div>
+
+    <div class="footer">
+      © 2026 天翼卫士团队 | 郑州大学管理学院
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+
+  <script>
+    fetch('markov_weibull_reliability.py')
+      .then(response => response.text())
+      .then(code => {
+        const codeBlock = document.getElementById('code-block');
+        codeBlock.textContent = code;
+        Prism.highlightElement(codeBlock);
+      })
+      .catch(error => {
+        document.getElementById('code-block').textContent = '代码加载失败，请检查 markov_weibull_reliability.py 是否存在。';
+      });
+  </script>
+</body>
+</html>
